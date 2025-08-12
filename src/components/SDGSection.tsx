@@ -121,7 +121,7 @@ const SDGSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {sdgs.map((sdg, index) => (
+          {sdgs.map((sdg) => (
             <motion.div
               key={sdg.number}
               variants={cardVariants}

@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { Leaf, Users, Heart, Globe, Target, Eye } from 'lucide-react'
 
 const AboutPage = () => {
@@ -197,7 +196,7 @@ const AboutPage = () => {
               
               <p className="text-lg leading-relaxed mb-6">
                 Our journey began with a simple but profound belief: waste is not just waste—it is 
-                opportunity. This philosophy, captured in our Swahili name "Taka Kazi" (Turn Trash 
+                opportunity. This philosophy, captured in our Swahili name &ldquo;Taka Kazi&rdquo; (Turn Trash 
                 into Work), has guided our evolution from a local initiative to a movement spanning 
                 multiple countries and impacting thousands of lives.
               </p>

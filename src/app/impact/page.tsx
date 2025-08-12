@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { TreePine, Users, Recycle, Award, Target, Globe, TrendingUp, Heart } from 'lucide-react'
+import { TreePine, Users, Recycle, Award, TrendingUp } from 'lucide-react'
 
 const ImpactPage = () => {
   const sdgGoals = [
@@ -103,7 +103,7 @@ const ImpactPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Measuring the difference we're making in environmental conservation, 
+            Measuring the difference we&apos;re making in environmental conservation, 
             community empowerment, and sustainable development across Africa.
           </motion.p>
         </div>
@@ -179,7 +179,7 @@ const ImpactPage = () => {
               Impact Stories
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Real stories of transformation from communities across Africa where we're making a difference.
+              Real stories of transformation from communities across Africa where we&apos;re making a difference.
             </p>
           </motion.div>
 

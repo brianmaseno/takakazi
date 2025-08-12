@@ -57,8 +57,8 @@ const FounderSection = () => {
             <div className="relative">
               <Quote className="absolute -top-4 -left-4 w-12 h-12 text-green-500 opacity-20" />
               <blockquote className="text-xl md:text-2xl font-medium text-gray-900 dark:text-white italic leading-relaxed">
-                "We believe waste is not just waste—it is opportunity. Our vision is to create 
-                a cleaner, greener Africa where people and planet thrive together."
+                &ldquo;We believe waste is not just waste—it is opportunity. Our vision is to create 
+                a cleaner, greener Africa where people and planet thrive together.&rdquo;
               </blockquote>
             </div>
 

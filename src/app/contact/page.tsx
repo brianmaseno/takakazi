@@ -89,7 +89,7 @@ const ContactPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Ready to join the movement? Let's work together to create a cleaner, 
+            Ready to join the movement? Let&apos;s work together to create a cleaner, 
             greener, and more sustainable Africa.
           </motion.p>
         </div>
@@ -219,14 +219,14 @@ const ContactPage = () => {
                   Get In Touch
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  We'd love to hear from you. Whether you're interested in volunteering, 
+                  We&apos;d love to hear from you. Whether you&apos;re interested in volunteering, 
                   partnering with us, or simply want to learn more about our work, 
-                  don't hesitate to reach out.
+                  don&apos;t hesitate to reach out.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {contactInfo.map((info, index) => (
+                {contactInfo.map((info) => (
                   <div
                     key={info.title}
                     className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6"

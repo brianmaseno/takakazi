@@ -353,7 +353,7 @@ const Gallery = () => {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Witness the transformation we're creating across Africa through environmental conservation, 
+            Witness the transformation we&apos;re creating across Africa through environmental conservation, 
             community empowerment, and sustainable development initiatives that make a real difference.
           </p>
         </motion.div>

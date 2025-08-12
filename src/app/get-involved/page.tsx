@@ -201,7 +201,7 @@ const GetInvolvedPage = () => {
               Ways to Get Involved
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Choose how you'd like to contribute to our mission of environmental stewardship 
+              Choose how you&apos;d like to contribute to our mission of environmental stewardship 
               and community empowerment.
             </p>
           </motion.div>

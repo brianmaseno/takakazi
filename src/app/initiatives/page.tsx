@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { TreePine, Users, Mic, Calendar, Palette, GraduationCap, Heart, Building } from 'lucide-react'
 
 const InitiativesPage = () => {
@@ -242,7 +241,7 @@ const InitiativesPage = () => {
               Join Our Initiatives
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Be part of the movement that's transforming communities and creating 
+              Be part of the movement that&apos;s transforming communities and creating 
               a sustainable future for Africa. Every action counts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

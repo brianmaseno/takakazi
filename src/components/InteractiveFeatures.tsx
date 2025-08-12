@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
-import { Leaf, Recycle, Users, Award, TreePine, Heart, Star, Zap } from 'lucide-react'
+import { Leaf, Recycle, Users, Award, TreePine, Heart, Star } from 'lucide-react'
 
 const InteractiveFeatures = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
