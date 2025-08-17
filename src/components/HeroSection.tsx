@@ -5,7 +5,11 @@ import { ArrowDown, Play, Sparkles, ArrowRight } from 'lucide-react'
 import { useRef, useState } from 'react'
 import Link from 'next/link'
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onOpenDonateModal?: () => void
+}
+
+const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -108,7 +112,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex justify-center items-center mb-16"
+          className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16"
         >
           <Link href="/get-involved">
             <motion.button
@@ -120,6 +124,18 @@ const HeroSection = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </Link>
+          
+          {onOpenDonateModal && (
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onOpenDonateModal}
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Partner With Us</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          )}
         </motion.div>
 
         {/* Statistics */}

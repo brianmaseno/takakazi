@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
-import { Menu, X, Sun, Moon } from 'lucide-react'
+import { Menu, X, Sun, Moon, Heart } from 'lucide-react'
+import DonateModal from './DonateModal'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
@@ -47,7 +49,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -57,6 +59,15 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Donate Button */}
+            <button
+              onClick={() => setIsDonateModalOpen(true)}
+              className="flex items-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <Heart className="w-4 h-4" />
+              <span className="font-medium">Donate</span>
+            </button>
             
             {/* Theme Toggle */}
             <button
@@ -109,10 +120,28 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Donate Button */}
+              <button
+                onClick={() => {
+                  setIsDonateModalOpen(true)
+                  setIsOpen(false)
+                }}
+                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-4 py-3 rounded-full transition-all duration-300 mt-4 w-full"
+              >
+                <Heart className="w-4 h-4" />
+                <span className="font-medium">Donate Now</span>
+              </button>
             </div>
           </div>
         )}
       </nav>
+      
+      {/* Donate Modal */}
+      <DonateModal 
+        isOpen={isDonateModalOpen} 
+        onClose={() => setIsDonateModalOpen(false)} 
+      />
     </header>
   )
 }

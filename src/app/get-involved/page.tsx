@@ -1,9 +1,18 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Users, HandHeart, Building, ShoppingBag, Calendar, DollarSign, Target, Globe } from 'lucide-react'
+import DonateModal from '@/components/DonateModal'
+
+// Note: Since this is a client component, metadata should be handled by the layout or parent
 
 const GetInvolvedPage = () => {
+  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false)
+
+  const handleDonateClick = () => {
+    setIsDonateModalOpen(true)
+  }
   const opportunities = [
     {
       icon: Users,
@@ -31,7 +40,8 @@ const GetInvolvedPage = () => {
       ],
       action: 'Partner With Us',
       color: 'text-blue-500',
-      bgColor: 'bg-blue-50 dark:bg-blue-900/20'
+      bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+      isDonateAction: true
     },
     {
       icon: ShoppingBag,
@@ -73,7 +83,8 @@ const GetInvolvedPage = () => {
       ],
       action: 'Donate Now',
       color: 'text-red-500',
-      bgColor: 'bg-red-50 dark:bg-red-900/20'
+      bgColor: 'bg-red-50 dark:bg-red-900/20',
+      isDonateAction: true
     },
     {
       icon: Target,
@@ -237,12 +248,21 @@ const GetInvolvedPage = () => {
                   ))}
                 </div>
                 
-                <a
-                  href="/contact"
-                  className={`inline-flex items-center justify-center w-full px-6 py-3 ${opportunity.color.replace('text-', 'bg-').replace('-500', '-600')} hover:${opportunity.color.replace('text-', 'bg-').replace('-500', '-700')} text-white font-semibold rounded-lg transition-colors duration-300`}
-                >
-                  {opportunity.action}
-                </a>
+                {opportunity.isDonateAction ? (
+                  <button
+                    onClick={handleDonateClick}
+                    className={`inline-flex items-center justify-center w-full px-6 py-3 ${opportunity.color.replace('text-', 'bg-').replace('-500', '-600')} hover:${opportunity.color.replace('text-', 'bg-').replace('-500', '-700')} text-white font-semibold rounded-lg transition-colors duration-300 cursor-pointer`}
+                  >
+                    {opportunity.action}
+                  </button>
+                ) : (
+                  <a
+                    href="/contact"
+                    className={`inline-flex items-center justify-center w-full px-6 py-3 ${opportunity.color.replace('text-', 'bg-').replace('-500', '-600')} hover:${opportunity.color.replace('text-', 'bg-').replace('-500', '-700')} text-white font-semibold rounded-lg transition-colors duration-300`}
+                  >
+                    {opportunity.action}
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
@@ -283,6 +303,12 @@ const GetInvolvedPage = () => {
           </motion.div>
         </div>
       </section>
+      
+      {/* Donate Modal */}
+      <DonateModal 
+        isOpen={isDonateModalOpen} 
+        onClose={() => setIsDonateModalOpen(false)} 
+      />
     </div>
   )
 }
