@@ -24,16 +24,16 @@ const Footer = () => {
               youth empowerment, and sustainable community development across Africa.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+              <a href="https://www.facebook.com/takakaziafrica/" className="text-gray-400 hover:text-green-400 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+              <a href="https://x.com/taka_kazi" className="text-gray-400 hover:text-green-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+              <a href="https://www.instagram.com/takakaziafrica/" className="text-gray-400 hover:text-green-400 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+              <a href="https://www.linkedin.com/in/taka-kazi-africa-b30395266/?originalSubdomain=ke" className="text-gray-400 hover:text-green-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -61,7 +61,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-green-400" />
-                <span className="text-gray-300">+254 700 000 000</span>
+                <span className="text-gray-300">+254  746 626 474</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-green-400" />

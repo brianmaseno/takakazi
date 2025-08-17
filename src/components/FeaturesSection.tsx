@@ -20,7 +20,7 @@ const FeaturesSection = () => {
       description: 'Mentoring young African leaders as green entrepreneurs and climate action champions.',
       color: 'text-blue-500',
       bgColor: 'bg-blue-50 dark:bg-blue-900/20',
-      image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/gallery/categories/youthempowerment.jpg'
     },
     {
       icon: Recycle,
@@ -44,7 +44,7 @@ const FeaturesSection = () => {
       description: 'Contributing to global sustainability goals and building climate resilience across the continent.',
       color: 'text-purple-500',
       bgColor: 'bg-purple-50 dark:bg-purple-900/20',
-      image: 'https://images.unsplash.com/photo-1549366021-9f761d040a87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/gallery/categories/climateaction.jpg'
     },
     {
       icon: Lightbulb,

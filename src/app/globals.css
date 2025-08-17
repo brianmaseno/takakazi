@@ -41,7 +41,7 @@ body {
 }
 
 .bg-conservation {
-  background-image: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-image: url('/gallery/aboutus.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .bg-youth-empowerment {
-  background-image: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+  background-image: url('/gallery/categories/ab.jpg');
   background-size: cover;
   background-position: center;
 }

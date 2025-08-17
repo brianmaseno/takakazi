@@ -8,15 +8,15 @@ const TeamSection = () => {
   const teamMembers = [
     {
       name: "George Ofunja",
-      position: "Founder & Environmental Advocate",
-      image: "/founder.jpg",
+      position: "Founder & Director",
+      image: "/gallery/categories/George Scarf photo.jpg",
       bio: "Environmental conservation enthusiast and youth advocate driving transformative change across Africa through innovative waste-to-opportunity initiatives.",
       expertise: ["Environmental Stewardship", "Youth Mentorship", "Climate Advocacy", "Community Development"]
     },
     {
       name: "Brian Maseno",
       position: "Software Developer",
-      image: "/team/brian.jpg",
+      image: "/team/IMG_7265-min.jpg",
       bio: "Full-stack developer passionate about building digital solutions that amplify environmental impact and community engagement.",
       expertise: ["Web Development", "Digital Solutions", "Tech Innovation", "UI/UX Design"]
     },
@@ -36,7 +36,7 @@ const TeamSection = () => {
     },
     {
       name: "Grace Achieng",
-      position: "Youth Programs Director",
+      position: "Youth Programs Manager",
       image: "/team/grace.jpg",
       bio: "Youth development advocate empowering the next generation of environmental leaders through education and hands-on experience.",
       expertise: ["Youth Development", "Educational Programs", "Leadership Training", "Mentorship"]
@@ -47,6 +47,34 @@ const TeamSection = () => {
       image: "/team/michael.jpg",
       bio: "Sustainability expert developing innovative solutions for circular economy implementation and sustainable business practices.",
       expertise: ["Sustainability Strategy", "Circular Economy", "Business Development", "Policy Analysis"]
+    },
+    {
+      name: "Leeroy Kagwa",
+      position: "Management Trainee",
+      image: "/gallery/categories/lee.JPG",
+      bio: "Emerging leader developing expertise in organizational management and sustainable business practices under expert mentorship.",
+      expertise: ["Management Training", "Business Operations", "Strategic Planning", "Team Coordination"]
+    },
+    {
+      name: "Dr. Faith Rialem",
+      position: "Strategic Advisor",
+      image: "/gallery/categories/Dr.Faith Rialem1685190321806.jpeg.jpg",
+      bio: "Experienced advisor providing strategic guidance on organizational development, research initiatives, and sustainable impact measurement.",
+      expertise: ["Strategic Planning", "Research & Development", "Impact Assessment", "Organizational Leadership"]
+    },
+    {
+      name: "Lincoln Ogweno",
+      position: "Technical Advisor",
+      image: "/team/michael.jpg",
+      bio: "Technology advisor focused on implementing digital solutions and IT infrastructure to support environmental initiatives and operational efficiency.",
+      expertise: ["IT Strategy", "Digital Transformation", "System Architecture", "Technology Consulting"]
+    },
+    {
+      name: "Dennis Omollo",
+      position: "Operations Advisor",
+      image: "/team/michael.jpg",
+      bio: "Operations advisor specializing in process optimization, quality management, and sustainable operational frameworks for environmental programs.",
+      expertise: ["Operations Management", "Process Optimization", "Quality Assurance", "Operational Strategy"]
     }
   ]
 
@@ -79,7 +107,7 @@ const TeamSection = () => {
               viewport={{ once: true }}
               className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
             >
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-100 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-500/20 z-10"></div>
                 <Image
                   src={member.image}

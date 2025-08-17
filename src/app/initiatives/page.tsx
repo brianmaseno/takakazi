@@ -9,14 +9,14 @@ const InitiativesPage = () => {
       icon: Users,
       title: 'Green Bees Movement',
       description: 'Mobilizing children and youth as "eco-pollinators" who spread awareness and take practical action on conservation.',
-      image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: '/gallery/categories/biz.jpg',
       features: ['Youth Leadership Training', 'Environmental Education', 'Community Action Projects', 'Peer-to-Peer Learning']
     },
     {
       icon: Mic,
       title: 'Rusinga Speaks',
       description: 'Public speaking and leadership program nurturing articulate, environmentally conscious young citizens.',
-      image: 'https://images.unsplash.com/photo-1551135049-8a33b5883817?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: '/gallery/categories/rusingapeaks.jpg',
       features: ['Public Speaking Skills', 'Environmental Advocacy', 'Leadership Development', 'Communication Training']
     },
     {

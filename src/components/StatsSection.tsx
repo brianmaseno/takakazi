@@ -14,14 +14,14 @@ const StatsSection = () => {
     },
     {
       icon: Users,
-      number: '10,000+',
+      number: '5,000+',
       label: 'Youth Empowered',
       description: 'Young leaders trained in climate action',
       color: 'text-blue-500'
     },
     {
       icon: Recycle,
-      number: '200+',
+      number: '150+',
       label: 'Clean-up Drives',
       description: 'Community clean-up initiatives completed',
       color: 'text-yellow-500'

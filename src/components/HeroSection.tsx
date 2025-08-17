@@ -2,10 +2,11 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown, Play, Sparkles, ArrowRight } from 'lucide-react'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 
 const HeroSection = () => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: heroRef,

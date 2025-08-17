@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Leaf, Users, Heart, Globe, Target, Eye } from 'lucide-react'
+import Image from 'next/image'
 
 const AboutPage = () => {
   const values = [
@@ -76,6 +77,24 @@ const AboutPage = () => {
                 and waste—where people and planet thrive together.
               </p>
               
+              {/* Vision Image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="mb-8"
+              >
+                <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/gallery/categories/about1.jpg"
+                    alt="Taka Kazi Africa Vision"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </motion.div>
+              
               <div className="flex items-center mb-6">
                 <Target className="w-8 h-8 text-green-500 mr-3" />
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Our Mission</h2>
@@ -94,6 +113,24 @@ const AboutPage = () => {
               viewport={{ once: true }}
               className="relative"
             >
+              {/* Mission Image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="mb-6"
+              >
+                <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/gallery/categories/about2.jpg"
+                    alt="Taka Kazi Africa Mission"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </motion.div>
+
               <div className="bg-recycling rounded-2xl h-96 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-600/80 to-blue-600/80"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -179,10 +216,36 @@ const AboutPage = () => {
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
+            {/* Story Images */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+            >
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/gallery/categories/about3.jpg"
+                  alt="Taka Kazi Africa Story"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/gallery/categories/about4.jpg"
+                  alt="Taka Kazi Africa Impact"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300"
             >

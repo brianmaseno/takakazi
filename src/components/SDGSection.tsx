@@ -25,8 +25,8 @@ const SDGSection = () => {
     },
     {
       number: 3,
-      title: "Good Health",
-      description: "Advancing mental health through nature engagement",
+      title: "Good Health and Well-being",
+      description: "Advancing healthcare access and mental health support",
       image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       color: "from-green-500 to-green-600"
     },
@@ -46,10 +46,52 @@ const SDGSection = () => {
     },
     {
       number: 6,
-      title: "Clean Water",
+      title: "Clean Water and Sanitation",
       description: "Water conservation and pollution reduction",
       image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       color: "from-cyan-500 to-cyan-600"
+    },
+    {
+      number: 7,
+      title: "Affordable and Clean Energy",
+      description: "Promoting renewable energy and efficiency",
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-yellow-400 to-yellow-600"
+    },
+    {
+      number: 8,
+      title: "Decent Work and Economic Growth",
+      description: "Creating green jobs and sustainable industries",
+      image: "https://images.unsplash.com/photo-1487528278747-ba99ed528ebc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      number: 9,
+      title: "Industry, Innovation and Infrastructure",
+      description: "Building resilient infrastructure with green technologies",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-orange-500 to-orange-600"
+    },
+    {
+      number: 10,
+      title: "Reduced Inequalities",
+      description: "Promoting inclusion and equal opportunities",
+      image: "https://images.unsplash.com/photo-1527181152855-fc03fc7949c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-pink-600 to-purple-600"
+    },
+    {
+      number: 11,
+      title: "Sustainable Cities and Communities",
+      description: "Promoting eco-friendly and resilient cities",
+      image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-indigo-500 to-indigo-600"
+    },
+    {
+      number: 12,
+      title: "Responsible Consumption and Production",
+      description: "Encouraging recycling and sustainable production",
+      image: "https://images.unsplash.com/photo-1565373674782-fab26e7d8320?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-yellow-600 to-amber-700"
     },
     {
       number: 13,
@@ -59,11 +101,32 @@ const SDGSection = () => {
       color: "from-green-600 to-emerald-700"
     },
     {
+      number: 14,
+      title: "Life Below Water",
+      description: "Protecting oceans and marine biodiversity",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-blue-600 to-blue-800"
+    },
+    {
       number: 15,
       title: "Life on Land",
       description: "Restoring forests and protecting biodiversity",
       image: "https://images.unsplash.com/photo-1549366021-9f761d040a87?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       color: "from-emerald-500 to-green-700"
+    },
+    {
+      number: 16,
+      title: "Peace, Justice and Strong Institutions",
+      description: "Strengthening governance and community safety",
+      image: "https://images.unsplash.com/photo-1485774539563-4ba1a1cd0c86?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-gray-700 to-gray-900"
+    },
+    {
+      number: 17,
+      title: "Partnerships for the Goals",
+      description: "Strengthening global and local partnerships",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      color: "from-indigo-600 to-purple-600"
     }
   ]
 
@@ -176,7 +239,7 @@ const SDGSection = () => {
               Be Part of the Global Movement
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join us in creating a sustainable future for Africa and contributing to the achievement of all 17 SDGs through environmental action.
+              Join us in creating a sustainable future and contributing to the achievement of all 17 SDGs through collective action.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
