@@ -4,9 +4,11 @@ import { ThemeProvider } from '@/components/theme-provider'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { JsonLd } from '@/components/JsonLd'
+import Analytics from '@/components/Analytics'
+import SEOOptimizer from '@/components/SEOOptimizer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://takakazi.africa'),
+  metadataBase: new URL('https://takakaziafrica.org'),
   title: "Taka Kazi Africa - Clean. Conserve. Recycle. Empower.",
   description: "Transforming waste into opportunity while empowering communities across Africa to create a cleaner, greener, and more sustainable future through environmental conservation and youth empowerment.",
   keywords: [
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     "environmental stewardship",
     "conservation projects Africa"
   ],
-  authors: [{ name: "Taka Kazi Africa", url: "https://takakazi.africa" }],
+  authors: [{ name: "Taka Kazi Africa", url: "https://takakaziafrica.org" }],
   creator: "Taka Kazi Africa",
   publisher: "Taka Kazi Africa",
   category: "Environmental Conservation",
@@ -48,7 +50,7 @@ export const metadata: Metadata = {
     title: "Taka Kazi Africa - Environmental Conservation & Youth Empowerment",
     description: "Join our movement to transform waste into opportunity and build a sustainable future for Africa. 50,000+ trees planted, 500+ tons waste recycled.",
     siteName: "Taka Kazi Africa",
-    url: "https://takakazi.africa",
+    url: "https://takakaziafrica.org",
     images: [
       {
         url: "/logo.png",
@@ -89,14 +91,14 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   alternates: {
-    canonical: "https://takakazi.africa",
+    canonical: "https://takakaziafrica.org",
     languages: {
-      'en-US': 'https://takakazi.africa',
-      'sw-KE': 'https://takakazi.africa/sw'
+      'en-US': 'https://takakaziafrica.org',
+      'sw-KE': 'https://takakaziafrica.org/sw'
     }
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "-RHGT-9sqamapfinMC9fo5clLsVBZQRCeDUPGTE9KTI",
     other: {
       "msvalidate.01": "your-bing-verification-code"
     }
@@ -122,8 +124,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Taka Kazi Africa" />
         <meta name="format-detection" content="telephone=no" />
         <JsonLd />
+        <Analytics gaId="G-WNQM8H5L8C" />
       </head>
       <body className="antialiased">
+        <SEOOptimizer />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

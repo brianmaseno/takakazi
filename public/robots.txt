@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://takakazi.africa/sitemap.xml
+Sitemap: https://takakaziafrica.org/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
