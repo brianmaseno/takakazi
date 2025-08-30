@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { TreePine, Users, Mic, Calendar, Palette, GraduationCap, Heart, Building } from 'lucide-react'
+import ScrollArrows from '@/components/ScrollArrows'
 
 const InitiativesPage = () => {
   const flagshipInitiatives = [
@@ -261,6 +262,9 @@ const InitiativesPage = () => {
           </motion.div>
         </div>
       </section>
+      
+      {/* Scroll Arrows */}
+      <ScrollArrows />
     </div>
   )
 }

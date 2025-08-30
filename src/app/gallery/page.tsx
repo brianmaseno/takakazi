@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Gallery from '@/components/Gallery'
+import ScrollArrows from '@/components/ScrollArrows'
 
 export const metadata: Metadata = {
   title: 'Gallery | Taka Kazi Africa - Environmental Conservation in Action',
@@ -28,6 +29,7 @@ export default function GalleryPage() {
   return (
     <main className="pt-20">
       <Gallery />
+      <ScrollArrows />
     </main>
   )
 }

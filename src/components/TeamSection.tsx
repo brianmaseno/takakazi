@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Github, Linkedin, Mail } from 'lucide-react'
+import ScrollArrows from '@/components/ScrollArrows'
 
 const TeamSection = () => {
   const teamMembers = [
@@ -19,6 +20,20 @@ const TeamSection = () => {
       image: "/team/IMG_7265-min.jpg",
       bio: "Full-stack developer passionate about building digital solutions that amplify environmental impact and community engagement.",
       expertise: ["Web Development", "Digital Solutions", "Tech Innovation", "UI/UX Design"]
+    },
+    {
+      name: "Leeroy Kagwa",
+      position: "Management Trainee",
+      image: "/gallery/categories/lee.JPG",
+      bio: "Emerging leader developing expertise in organizational management and sustainable business practices under expert mentorship.",
+      expertise: ["Management Training", "Business Operations", "Strategic Planning", "Team Coordination"]
+    },
+    {
+      name: "Dr. Faith Rialem",
+      position: "Strategic Advisor",
+      image: "/gallery/categories/Dr.Faith Rialem1685190321806.jpeg.jpg",
+      bio: "Experienced advisor providing strategic guidance on organizational development, research initiatives, and sustainable impact measurement.",
+      expertise: ["Strategic Planning", "Research & Development", "Impact Assessment", "Organizational Leadership"]
     },
     {
       name: "Sarah Wanjiku",
@@ -47,20 +62,6 @@ const TeamSection = () => {
       image: "/team/michael.jpg",
       bio: "Sustainability expert developing innovative solutions for circular economy implementation and sustainable business practices.",
       expertise: ["Sustainability Strategy", "Circular Economy", "Business Development", "Policy Analysis"]
-    },
-    {
-      name: "Leeroy Kagwa",
-      position: "Management Trainee",
-      image: "/gallery/categories/lee.JPG",
-      bio: "Emerging leader developing expertise in organizational management and sustainable business practices under expert mentorship.",
-      expertise: ["Management Training", "Business Operations", "Strategic Planning", "Team Coordination"]
-    },
-    {
-      name: "Dr. Faith Rialem",
-      position: "Strategic Advisor",
-      image: "/gallery/categories/Dr.Faith Rialem1685190321806.jpeg.jpg",
-      bio: "Experienced advisor providing strategic guidance on organizational development, research initiatives, and sustainable impact measurement.",
-      expertise: ["Strategic Planning", "Research & Development", "Impact Assessment", "Organizational Leadership"]
     },
     {
       name: "Lincoln Ogweno",
@@ -107,13 +108,13 @@ const TeamSection = () => {
               viewport={{ once: true }}
               className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
             >
-              <div className="relative h-100 overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-500/20 z-10"></div>
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               
@@ -155,6 +156,9 @@ const TeamSection = () => {
           ))}
         </div>
       </div>
+      
+      {/* Scroll Arrows */}
+      <ScrollArrows />
     </section>
   )
 }

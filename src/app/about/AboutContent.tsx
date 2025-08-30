@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Leaf, Users, Heart, Globe, Target, Eye } from 'lucide-react'
 import Image from 'next/image'
+import ScrollArrows from '@/components/ScrollArrows'
 
 const AboutContent = () => {
   const values = [
@@ -29,6 +30,18 @@ const AboutContent = () => {
       title: 'Inclusion',
       description: 'Engaging diverse voices and ensuring no one is left behind in our mission.',
       color: 'text-purple-500'
+    },
+    {
+      icon: Target,
+      title: 'Excellence',
+      description: 'Striving for the highest quality in all our programs and services.',
+      color: 'text-orange-500'
+    },
+    {
+      icon: Eye,
+      title: 'Innovation',
+      description: 'Embracing creative solutions and new approaches to environmental challenges.',
+      color: 'text-indigo-500'
     }
   ]
 
@@ -85,12 +98,12 @@ const AboutContent = () => {
                 viewport={{ once: true }}
                 className="mb-8"
               >
-                <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+                <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src="/gallery/aboutus.jpg"
                     alt="Taka Kazi Africa Vision"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                 </div>
               </motion.div>
@@ -121,12 +134,12 @@ const AboutContent = () => {
                 viewport={{ once: true }}
                 className="mb-6"
               >
-                <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+                <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src="/gallery/team.jpg"
                     alt="Taka Kazi Africa Mission"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                 </div>
               </motion.div>
@@ -165,7 +178,7 @@ const AboutContent = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -268,7 +281,7 @@ const AboutContent = () => {
               <p className="text-lg leading-relaxed mb-6">
                 Taka Kazi Africa was born from a powerful realization: that environmental challenges 
                 and social inequalities are deeply interconnected, and that solutions must address 
-                both simultaneously. Founded by George Otieno Ogola, our organization emerged from years 
+                both simultaneously. Founded by George Ofunja, our organization emerged from years 
                 of working with communities across Africa and witnessing firsthand the transformative 
                 potential of turning environmental challenges into economic opportunities.
               </p>
@@ -299,6 +312,9 @@ const AboutContent = () => {
           </div>
         </div>
       </section>
+      
+      {/* Scroll Arrows */}
+      <ScrollArrows />
     </div>
   )
 }

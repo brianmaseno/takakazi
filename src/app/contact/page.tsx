@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, Clock, Users, Heart } from 'lucide-react'
+import ScrollArrows from '@/components/ScrollArrows'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -304,6 +305,9 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+      
+      {/* Scroll Arrows */}
+      <ScrollArrows />
     </div>
   )
 }

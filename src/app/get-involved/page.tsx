@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Users, HandHeart, Building, ShoppingBag, Calendar, DollarSign, Target, Globe } from 'lucide-react'
 import DonateModal from '@/components/DonateModal'
+import ScrollArrows from '@/components/ScrollArrows'
 
 // Note: Since this is a client component, metadata should be handled by the layout or parent
 
@@ -309,6 +310,9 @@ const GetInvolvedPage = () => {
         isOpen={isDonateModalOpen} 
         onClose={() => setIsDonateModalOpen(false)} 
       />
+      
+      {/* Scroll Arrows */}
+      <ScrollArrows />
     </div>
   )
 }

@@ -35,17 +35,17 @@ const Navigation = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-3">
             <Image 
               src="/logo.png" 
               alt="Taka Kazi Africa Logo" 
-              width={50} 
-              height={50}
+              width={100} 
+              height={100}
               className="rounded-full"
             />
-            <span className="text-xl font-bold text-green-600 dark:text-green-400">
+            {/* <span className="text-sm font-bold text-green-600 dark:text-green-600">
               Taka Kazi Africa
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}

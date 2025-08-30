@@ -9,6 +9,7 @@ import SDGSection from '@/components/SDGSection'
 import Gallery from '@/components/Gallery'
 import ProjectShowcase from '@/components/ProjectShowcase'
 import GoalsSection from '@/components/GoalsSection'
+import StrategicFocusSection from '@/components/StrategicFocusSection'
 import DonateModal from '@/components/DonateModal'
 import ScrollArrows from '@/components/ScrollArrows'
 
@@ -25,6 +26,7 @@ export default function Home() {
       <ProjectShowcase />
       <Gallery />
       <SDGSection />
+      <StrategicFocusSection />
       <StatsSection />
       <GoalsSection />
       

@@ -250,6 +250,23 @@ const SDGSection = () => {
             </motion.button>
           </div>
         </motion.div>
+
+        {/* UN Global Compact Principles */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              UN Global Compact Principles
+            </h3>
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              We also uphold the UN Global Compact Principles in human rights, labor, environment, and anti-corruption, and integrate ESG (Environmental, Social, and Governance) commitments into all our operations by reducing waste, supporting green livelihoods, promoting inclusion and ethical governance.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

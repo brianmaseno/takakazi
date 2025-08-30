@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { TreePine, Users, Recycle, Award, TrendingUp } from 'lucide-react'
+import ScrollArrows from '@/components/ScrollArrows'
 
 const ImpactPage = () => {
   const sdgGoals = [
@@ -305,6 +306,9 @@ const ImpactPage = () => {
           </motion.div>
         </div>
       </section>
+      
+      {/* Scroll Arrows */}
+      <ScrollArrows />
     </div>
   )
 }
