@@ -11,11 +11,41 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isDonateModalOpen, setIsDonateModalOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      // Always show navigation at the top of the page
+      if (currentScrollY < 100) {
+        setIsVisible(true)
+      } else {
+        // Show when scrolling up, hide when scrolling down
+        if (currentScrollY < lastScrollY) {
+          setIsVisible(true)
+        } else {
+          setIsVisible(false)
+          // Close mobile menu when hiding navigation
+          setIsOpen(false)
+        }
+      }
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [lastScrollY])
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -31,7 +61,9 @@ const Navigation = () => {
   if (!mounted) return null
 
   return (
-    <header className="fixed w-full z-50 glass-effect backdrop-blur-md">
+    <header className={`fixed w-full z-50 transition-transform duration-300 ease-in-out ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -39,8 +71,8 @@ const Navigation = () => {
             <Image 
               src="/logo.png" 
               alt="Taka Kazi Africa Logo" 
-              width={100} 
-              height={100}
+              width={150} 
+              height={150}
               className="rounded-full"
             />
             {/* <span className="text-sm font-bold text-green-600 dark:text-green-600">
@@ -54,7 +86,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200 font-medium"
+                className="text-white hover:text-green-400 transition-colors duration-200 font-medium drop-shadow-lg"
               >
                 {item.name}
               </Link>
@@ -72,13 +104,13 @@ const Navigation = () => {
             {/* Theme Toggle */}
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-yellow-500" />
+                <Sun className="w-5 h-5 text-yellow-400" />
               ) : (
-                <Moon className="w-5 h-5 text-gray-600" />
+                <Moon className="w-5 h-5 text-white" />
               )}
             </button>
           </div>
@@ -87,18 +119,18 @@ const Navigation = () => {
           <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
-                <Sun className="w-5 h-5 text-yellow-500" />
+                <Sun className="w-5 h-5 text-yellow-400" />
               ) : (
-                <Moon className="w-5 h-5 text-gray-600" />
+                <Moon className="w-5 h-5 text-white" />
               )}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
+              className="p-2 rounded-md text-white hover:text-green-400"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -108,13 +140,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden py-4 bg-black/80 backdrop-blur-sm rounded-lg mx-4">
+            <div className="flex flex-col space-y-3 px-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200 font-medium py-2"
+                  className="text-white hover:text-green-400 transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

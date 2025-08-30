@@ -1,10 +1,55 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Users, Heart, ShoppingBag, Calendar, Target, Handshake } from 'lucide-react'
+import { GraduationCap, Shield, Recycle, Users, Heart, Building, Scale, Target, Handshake } from 'lucide-react'
 
 const StrategicFocusSection = () => {
-  const focusAreas = [
+  const strategicAreas = [
+    {
+      icon: GraduationCap,
+      title: "Environmental Education & Awareness",
+      description: "Schools, colleges, universities and community programs that inspire sustainable lifestyles.",
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: Shield,
+      title: "Climate Change & Conflict Mitigation",
+      description: "Addressing how environmental stressors fuel social tensions and promoting climate peace solutions.",
+      color: "from-red-500 to-red-600"
+    },
+    {
+      icon: Recycle,
+      title: "Waste Management & Circular Economy",
+      description: "Recycling, upcycling, and waste-to-wealth innovation.",
+      color: "from-green-500 to-green-600"
+    },
+    {
+      icon: Users,
+      title: "Youth Empowerment & Leadership",
+      description: "Mentoring young people as green entrepreneurs and climate leaders.",
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      icon: Heart,
+      title: "Nature & Mental Health",
+      description: "Promoting eco-therapy, mindfulness in nature, and the mental well-being benefits of environmental action.",
+      color: "from-pink-500 to-pink-600"
+    },
+    {
+      icon: Building,
+      title: "Community Engagement & CSR",
+      description: "Partnering with corporates to create shared impact and meet ESG goals.",
+      color: "from-indigo-500 to-indigo-600"
+    },
+    {
+      icon: Scale,
+      title: "Advocacy & Policy Engagement",
+      description: "Influencing environmental governance aligned with SDGs and Global Compact Principles.",
+      color: "from-orange-500 to-orange-600"
+    }
+  ]
+
+  const collaborationAreas = [
     {
       icon: Target,
       title: "Partnerships & Collaboration",
@@ -18,13 +63,13 @@ const StrategicFocusSection = () => {
       color: "from-green-500 to-green-600"
     },
     {
-      icon: ShoppingBag,
+      icon: Handshake,
       title: "Sale of branded environmental merchandise",
       description: "Offering eco-conscious, high-quality products—such as reusable bottles, tote bags, T-shirts, and stationery—designed with powerful environmental messages to inspire action while generating revenue to sustain our initiatives.",
       color: "from-purple-500 to-purple-600"
     },
     {
-      icon: Calendar,
+      icon: Building,
       title: "Event sponsorship packages and partnerships",
       description: "Collaborating with businesses, institutions, and philanthropists through tiered sponsorship models, giving partners branding visibility, engagement opportunities, and measurable social impact at our events and programs.",
       color: "from-orange-500 to-orange-600"
@@ -39,6 +84,7 @@ const StrategicFocusSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Strategic Focus Areas */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,12 +96,51 @@ const StrategicFocusSection = () => {
             Strategic Focus Areas
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Our comprehensive approach to sustainable development and environmental conservation through strategic partnerships and community engagement.
+            Our comprehensive approach to sustainable development and environmental conservation through seven key strategic areas.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {strategicAreas.map((area, index) => (
+            <motion.div
+              key={area.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500"
+            >
+              <div className={`flex-shrink-0 p-3 bg-gradient-to-br ${area.color} rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4 inline-block`}>
+                <area.icon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                {area.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                {area.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Collaboration & Partnership Opportunities */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            Partnership & Collaboration Opportunities
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Multiple ways to engage with Taka Kazi Africa and contribute to our mission of environmental stewardship and community empowerment.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {focusAreas.map((area, index) => (
+          {collaborationAreas.map((area, index) => (
             <motion.div
               key={area.title}
               initial={{ opacity: 0, y: 30 }}

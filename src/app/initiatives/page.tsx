@@ -40,44 +40,65 @@ const InitiativesPage = () => {
     {
       icon: TreePine,
       title: 'Monthly Tree Planting',
-      description: 'Supporting Kenya\'s 15-billion tree target through community mobilization.',
+      description: 'Mobilizing communities, schools, and youth groups to plant and nurture indigenous and fruit trees, directly contributing to national and global reforestation goals while restoring ecosystems and combating climate change.',
       frequency: 'Monthly',
       impact: '50,000+ trees planted'
     },
     {
       icon: Users,
-      title: 'Clean-up Drives',
-      description: 'Coordinated clean-ups in markets, beaches, rivers, estates, and rural villages.',
+      title: 'Bi-monthly Clean-up Drives',
+      description: 'Coordinated clean-ups in markets, beaches, rivers, estates, and rural villages, aimed at waste reduction, pollution control, and creating a culture of environmental responsibility.',
       frequency: 'Bi-monthly',
       impact: '200+ drives completed'
     },
     {
       icon: GraduationCap,
       title: 'Youth Leadership Workshops',
-      description: 'Capacity-building sessions on climate action and entrepreneurship.',
+      description: 'Capacity-building sessions equipping young people with skills to innovate, lead, and create sustainable businesses that address environmental and social challenges.',
       frequency: 'Monthly',
       impact: '10,000+ youth trained'
     },
     {
+      icon: Mic,
+      title: 'Taka Speak Dialogues',
+      description: 'A platform for thought leaders, activists, innovators, and community voices to engage in solution-driven conversations on environmental stewardship, sustainability, and green economy opportunities.',
+      frequency: 'Monthly',
+      impact: 'Podcast & live events'
+    },
+    {
       icon: Palette,
       title: 'Eco-Culture Festivals',
-      description: 'Celebrating creativity as a driver of environmental change.',
+      description: 'Celebrating creativity as a driver of change through festivals that blend entertainment with environmental advocacy, promoting cultural pride, unity, and sustainable living.',
       frequency: 'Seasonal',
       impact: '25+ festivals organized'
     },
     {
+      icon: Users,
+      title: 'School Environmental Clubs',
+      description: 'Mentoring student-led clubs to champion eco-initiatives, while fostering healthy competition that rewards creativity, innovation, and measurable environmental impact.',
+      frequency: 'Ongoing',
+      impact: '100+ schools reached'
+    },
+    {
       icon: Heart,
       title: 'Eco-therapy Retreats',
-      description: 'Promoting mental health through nature engagement and mindfulness.',
+      description: 'Guided experiences in natural settings to improve mental well-being, reduce stress, and strengthen the human–nature connection as part of holistic environmental education.',
       frequency: 'Quarterly',
       impact: '500+ participants'
     },
     {
       icon: Calendar,
-      title: 'Educational Programs',
-      description: 'Experiential learning activities combining education and environmental advocacy.',
+      title: 'Educational Programs & Eco-tourism',
+      description: 'Designing and delivering paid experiential learning activities—such as guided nature tours, eco-retreats, and conservation workshops—that blend education, adventure, and environmental advocacy.',
       frequency: 'Ongoing',
       impact: '100+ programs delivered'
+    },
+    {
+      icon: Building,
+      title: 'CSR Community Initiatives',
+      description: 'Partnering with corporates to co-design and implement impactful CSR projects—such as tree planting, clean-ups, and school greening—that align with both environmental sustainability and corporate values.',
+      frequency: 'As needed',
+      impact: '50+ partnerships'
     }
   ]
 

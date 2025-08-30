@@ -20,6 +20,12 @@ const AboutContent = () => {
       color: 'text-blue-500'
     },
     {
+      icon: Eye,
+      title: 'Innovation',
+      description: 'Developing creative, sustainable solutions to environmental challenges.',
+      color: 'text-indigo-500'
+    },
+    {
       icon: Heart,
       title: 'Integrity',
       description: 'Acting with transparency, ethics, and accountability in all our endeavors.',
@@ -33,15 +39,15 @@ const AboutContent = () => {
     },
     {
       icon: Target,
-      title: 'Excellence',
-      description: 'Striving for the highest quality in all our programs and services.',
-      color: 'text-orange-500'
+      title: 'Peace with Nature',
+      description: 'Recognizing environmental harmony as essential to human well-being.',
+      color: 'text-teal-500'
     },
     {
-      icon: Eye,
-      title: 'Innovation',
-      description: 'Embracing creative solutions and new approaches to environmental challenges.',
-      color: 'text-indigo-500'
+      icon: Leaf,
+      title: 'Sustainability',
+      description: 'Promoting practices that balance people, profit, and the planet.',
+      color: 'text-emerald-500'
     }
   ]
 
@@ -178,7 +184,7 @@ const AboutContent = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
