@@ -9,33 +9,36 @@ import SEOOptimizer from '@/components/SEOOptimizer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://takakaziafrica.org'),
-  title: "Taka Kazi Africa - Founded by George Otieno Ogola | Environmental Conservation Africa",
-  description: "Founded by environmental leader George Otieno Ogola, Taka Kazi Africa transforms waste into opportunity across Africa. 50,000+ trees planted, 500+ tons recycled. Join our movement for climate action and youth empowerment in Kenya and beyond.",
+  title: "Taka Kazi Africa | Environmental Conservation NGO Kenya | George Otieno Ogola Founder",
+  description: "Taka Kazi Africa is Kenya's leading environmental conservation NGO founded by George Otieno Ogola. We transform waste into opportunity across Africa with 50,000+ trees planted, 500+ tons recycled. Join our climate action movement for sustainable development in Kenya and Africa.",
   keywords: [
     "Taka Kazi Africa",
+    "takakazi africa",
     "taka kazi africa",
     "TAKA KAZI AFRICA",
-    "George Otieno Ogola founder Taka Kazi Africa",
-    "environmental conservation Africa",
-    "sustainability Kenya",
-    "youth empowerment Africa",
+    "TakaKazi Africa",
+    "environmental NGO Kenya",
+    "George Otieno Ogola",
+    "George Otieno Ogola founder",
+    "environmental conservation Kenya",
+    "sustainability Kenya Africa",
     "climate action Kenya",
-    "waste management solutions Africa",
-    "circular economy Kenya",
-    "tree planting programs Kenya",
-    "environmental NGO Africa",
-    "George Otieno environmental leader",
-    "Taka Kazi Africa founder",
-    "community development Kenya",
+    "waste management Kenya",
+    "tree planting Kenya",
+    "youth empowerment Africa",
+    "environmental education Kenya",
     "green initiatives Africa",
-    "environmental education Africa",
-    "SDG goals implementation Kenya",
+    "circular economy Kenya",
     "carbon footprint reduction Africa",
     "plastic waste recycling Kenya",
     "environmental stewardship Africa",
-    "conservation projects Kenya Africa",
+    "conservation projects Kenya",
+    "SDG implementation Kenya",
+    "community development Kenya",
     "environmental activism Africa",
     "sustainable development Kenya",
+    "Kenya environmental organizations",
+    "Africa environmental conservation",
     "takakazi.africa",
     "takakaziafrica.org"
   ],
@@ -86,12 +89,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/logo-16.png", sizes: "16x16", type: "image/png" },
       { url: "/logo-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo-16.png", sizes: "16x16", type: "image/png" },
       { url: "/logo.png", sizes: "192x192", type: "image/png" }
     ],
-    shortcut: "/favicon.ico",
     apple: [
       { url: "/logo-180.png", sizes: "180x180", type: "image/png" }
     ],
@@ -107,11 +108,6 @@ export const metadata: Metadata = {
         type: "image/png", 
         sizes: "16x16",
         url: "/logo-16.png"
-      },
-      {
-        rel: "mask-icon",
-        url: "/logo.png",
-        color: "#16a34a"
       }
     ]
   },
@@ -139,11 +135,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/logo-32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/logo-16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#16a34a" />
         <meta name="msapplication-TileColor" content="#16a34a" />
         <meta name="msapplication-TileImage" content="/logo-180.png" />
