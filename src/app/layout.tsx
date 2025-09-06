@@ -9,24 +9,35 @@ import SEOOptimizer from '@/components/SEOOptimizer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://takakaziafrica.org'),
-  title: "Taka Kazi Africa - Clean. Conserve. Recycle. Empower.",
-  description: "Transforming waste into opportunity while empowering communities across Africa to create a cleaner, greener, and more sustainable future through environmental conservation and youth empowerment.",
+  title: "Taka Kazi Africa - Founded by George Otieno Ogola | Environmental Conservation Africa",
+  description: "Founded by environmental leader George Otieno Ogola, Taka Kazi Africa transforms waste into opportunity across Africa. 50,000+ trees planted, 500+ tons recycled. Join our movement for climate action and youth empowerment in Kenya and beyond.",
   keywords: [
+    "Taka Kazi Africa",
+    "taka kazi africa",
+    "TAKA KAZI AFRICA",
+    "George Otieno Ogola founder Taka Kazi Africa",
     "environmental conservation Africa",
     "sustainability Kenya",
-    "youth empowerment",
-    "climate action",
-    "waste management",
-    "circular economy",
-    "tree planting",
-    "community development",
-    "green initiatives",
-    "environmental education",
-    "SDG goals",
-    "carbon footprint reduction",
-    "plastic waste recycling",
-    "environmental stewardship",
-    "conservation projects Africa"
+    "youth empowerment Africa",
+    "climate action Kenya",
+    "waste management solutions Africa",
+    "circular economy Kenya",
+    "tree planting programs Kenya",
+    "environmental NGO Africa",
+    "George Otieno environmental leader",
+    "Taka Kazi Africa founder",
+    "community development Kenya",
+    "green initiatives Africa",
+    "environmental education Africa",
+    "SDG goals implementation Kenya",
+    "carbon footprint reduction Africa",
+    "plastic waste recycling Kenya",
+    "environmental stewardship Africa",
+    "conservation projects Kenya Africa",
+    "environmental activism Africa",
+    "sustainable development Kenya",
+    "takakazi.africa",
+    "takakaziafrica.org"
   ],
   authors: [{ name: "Taka Kazi Africa", url: "https://takakaziafrica.org" }],
   creator: "Taka Kazi Africa",
@@ -47,8 +58,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Taka Kazi Africa - Environmental Conservation & Youth Empowerment",
-    description: "Join our movement to transform waste into opportunity and build a sustainable future for Africa. 50,000+ trees planted, 500+ tons waste recycled.",
+    title: "Taka Kazi Africa - Founded by George Otieno Ogola | Environmental Conservation Africa",
+    description: "Founded by environmental leader George Otieno Ogola, Taka Kazi Africa leads climate action across Africa. 50,000+ trees planted, 500+ tons recycled. Join our environmental movement in Kenya and beyond.",
     siteName: "Taka Kazi Africa",
     url: "https://takakaziafrica.org",
     images: [
@@ -68,20 +79,35 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taka Kazi Africa - Clean. Conserve. Recycle. Empower.",
-    description: "Transforming waste into opportunity across Africa. Join our environmental conservation movement today!",
+    title: "Taka Kazi Africa - Founded by George Otieno Ogola | Environmental Leader Africa",
+    description: "Founded by George Otieno Ogola, transforming waste into opportunity across Africa. 50,000+ trees planted. Join our climate action movement!",
     creator: "@TakaKaziAfrica",
     images: ["/logo.png"],
   },
   icons: {
     icon: [
-      { url: "/logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo.png", sizes: "16x16", type: "image/png" }
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/logo-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "192x192", type: "image/png" }
     ],
+    shortcut: "/favicon.ico",
     apple: [
-      { url: "/logo.png", sizes: "180x180", type: "image/png" }
+      { url: "/logo-180.png", sizes: "180x180", type: "image/png" }
     ],
     other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        url: "/logo-32.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png", 
+        sizes: "16x16",
+        url: "/logo-16.png"
+      },
       {
         rel: "mask-icon",
         url: "/logo.png",
@@ -113,15 +139,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo-16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo-180.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#16a34a" />
         <meta name="msapplication-TileColor" content="#16a34a" />
+        <meta name="msapplication-TileImage" content="/logo-180.png" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Taka Kazi Africa" />
+        <meta name="application-name" content="Taka Kazi Africa" />
         <meta name="format-detection" content="telephone=no" />
         <JsonLd />
         <Analytics gaId="G-WNQM8H5L8C" />

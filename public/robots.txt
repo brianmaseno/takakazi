@@ -7,11 +7,16 @@ Sitemap: https://takakaziafrica.org/sitemap.xml
 # Crawl-delay
 Crawl-delay: 1
 
+# High priority pages for Taka Kazi Africa
+Allow: /about/founder
+Allow: /about
+Allow: /
+
 # Block specific paths if needed
 # Disallow: /admin/
 # Disallow: /private/
 
-# Allow search engines to index images
+# Allow search engines to index images and content
 User-agent: *
 Allow: /gallery/
 Allow: /team/
@@ -20,7 +25,7 @@ Allow: *.png
 Allow: *.gif
 Allow: *.webp
 
-# Allow all major search engines
+# Allow all major search engines for Taka Kazi Africa
 User-agent: Googlebot
 Allow: /
 
@@ -35,3 +40,6 @@ Allow: /
 
 User-agent: Baiduspider
 Allow: /
+
+# Specific optimization for Taka Kazi Africa searches
+# This helps search engines understand our priority pages

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
-import { Menu, X, Sun, Moon, Heart } from 'lucide-react'
+import { Menu, X, Sun, Moon, Heart, ChevronDown } from 'lucide-react'
 import DonateModal from './DonateModal'
 
 const Navigation = () => {
@@ -13,6 +13,7 @@ const Navigation = () => {
   const [mounted, setMounted] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false)
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
@@ -49,7 +50,14 @@ const Navigation = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    { 
+      name: 'About', 
+      href: '/about',
+      dropdown: [
+        { name: 'Our Story', href: '/about' },
+        { name: 'Meet Our Founder', href: '/about/founder' }
+      ]
+    },
     { name: 'Team', href: '/team' },
     { name: 'Initiatives', href: '/initiatives' },
     { name: 'Gallery', href: '/gallery' },
@@ -83,13 +91,40 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white hover:text-green-400 transition-colors duration-200 font-medium drop-shadow-lg"
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setAboutDropdownOpen(true)}
+                    onMouseLeave={() => setAboutDropdownOpen(false)}
+                  >
+                    <button className="flex items-center space-x-1 text-white hover:text-green-400 transition-colors duration-200 font-medium drop-shadow-lg">
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                    {aboutDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-50">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block px-4 py-2 text-gray-800 dark:text-white hover:bg-green-50 dark:hover:bg-green-900 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-white hover:text-green-400 transition-colors duration-200 font-medium drop-shadow-lg"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
             
             {/* Donate Button */}
@@ -143,14 +178,39 @@ const Navigation = () => {
           <div className="md:hidden py-4 bg-black/80 backdrop-blur-sm rounded-lg mx-4">
             <div className="flex flex-col space-y-3 px-4">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-white hover:text-green-400 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <Link
+                        href={item.href}
+                        className="text-white hover:text-green-400 transition-colors duration-200 font-medium py-2 block"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <div className="pl-4 space-y-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 text-sm"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-white hover:text-green-400 transition-colors duration-200 font-medium py-2 block"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               
               {/* Mobile Donate Button */}
