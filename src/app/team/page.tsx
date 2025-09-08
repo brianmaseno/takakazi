@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'environmental activists africa',
     'sustainability experts',
     'community leaders',
-    'george otieno ogola'
+    'george ofunja'
   ],
   openGraph: {
     title: 'Meet Our Team - Taka Kazi Africa Environmental Leaders',

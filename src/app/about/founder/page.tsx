@@ -64,14 +64,14 @@ export default function FounderPage() {
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
                 Meet{' '}
                 <span className="text-green-600 dark:text-green-400">
-                  George Otieno Ogola
+                  George Ofunja
                 </span>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
                 Founder & Environmental Conservation Leader
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                George Otieno Ogola is a visionary environmental leader who founded Taka Kazi Africa 
+                George Ofunja is a visionary environmental leader who founded Taka Kazi Africa 
                 with a mission to transform waste into opportunity while empowering communities across 
                 Africa. His passion for environmental conservation and youth development has led to 
                 remarkable achievements in sustainable development and community empowerment.
@@ -98,7 +98,7 @@ export default function FounderPage() {
               <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/founder.jpg"
-                  alt="George Otieno Ogola - Founder of Taka Kazi Africa"
+                  alt="George Ofunja - Founder of Taka Kazi Africa"
                   fill
                   className="object-cover"
                   priority
@@ -221,7 +221,7 @@ export default function FounderPage() {
               brings us closer to the Africa we envision.&rdquo;
             </blockquote>
             <cite className="text-lg font-semibold">
-              — George Otieno Ogola, Founder of Taka Kazi Africa
+              — George Ofunja, Founder of Taka Kazi Africa
             </cite>
           </motion.div>
         </div>
@@ -240,7 +240,7 @@ export default function FounderPage() {
               Join George&apos;s Mission
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Be part of the movement that George Otieno Ogola started. Together, we can continue 
+              Be part of the movement that George Ofunja started. Together, we can continue 
               transforming waste into opportunity and building a sustainable future for Africa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

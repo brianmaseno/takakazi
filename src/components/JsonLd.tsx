@@ -6,7 +6,7 @@ export const JsonLd = () => {
     "@type": "Organization",
     "name": "Taka Kazi Africa",
     "alternateName": ["TKA", "Taka Kazi", "Takakazi Africa", "taka kazi africa", "TAKA KAZI AFRICA"],
-    "description": "Environmental conservation and youth empowerment organization founded by George Otieno Ogola, transforming waste into opportunity across Africa with over 50,000 trees planted and 500+ tons of waste recycled",
+    "description": "Environmental conservation and youth empowerment organization founded by George Ofunja, transforming waste into opportunity across Africa with over 50,000 trees planted and 500+ tons of waste recycled",
     "slogan": "Clean. Conserve. Recycle. Empower.",
     "url": "https://takakaziafrica.org",
     "logo": {
@@ -14,21 +14,21 @@ export const JsonLd = () => {
       "url": "https://takakaziafrica.org/logo.png",
       "width": 400,
       "height": 400,
-      "caption": "Taka Kazi Africa Logo - Environmental Conservation Organization founded by George Otieno Ogola"
+      "caption": "Taka Kazi Africa Logo - Environmental Conservation Organization founded by George Ofunja"
     },
     "image": {
       "@type": "ImageObject",
       "url": "https://takakaziafrica.org/gallery/best.jpg",
       "width": 1200,
       "height": 630,
-      "caption": "Taka Kazi Africa environmental conservation activities led by founder George Otieno Ogola"
+      "caption": "Taka Kazi Africa environmental conservation activities led by founder George Ofunja"
     },
     "foundingDate": "2020",
     "founder": {
       "@type": "Person",
-      "name": "George Otieno Ogola",
+      "name": "George Ofunja",
       "givenName": "George",
-      "familyName": "Otieno Ogola",
+      "familyName": "Ofunja",
       "jobTitle": "Founder & Environmental Leader",
       "description": "Environmental conservation leader and founder of Taka Kazi Africa, dedicated to transforming waste into opportunity and empowering communities across Africa through sustainable development initiatives",
       "image": "https://takakaziafrica.org/founder.jpg",
@@ -255,9 +255,9 @@ export const JsonLd = () => {
   const founderSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "George Otieno Ogola",
+    "name": "George Ofunja",
     "givenName": "George",
-    "familyName": "Otieno Ogola",
+    "familyName": "Ofunja",
     "description": "Environmental conservation leader, founder of Taka Kazi Africa, and champion of sustainable development across Africa. George has led initiatives that planted over 50,000 trees and recycled 500+ tons of waste while empowering thousands of young people in environmental stewardship.",
     "jobTitle": "Founder & CEO, Environmental Conservation Leader",
     "worksFor": {
@@ -327,7 +327,7 @@ export const JsonLd = () => {
         "name": "Who founded Taka Kazi Africa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taka Kazi Africa was founded by George Otieno Ogola, an environmental conservation leader dedicated to transforming waste into opportunity and empowering communities across Africa through sustainable development initiatives."
+          "text": "Taka Kazi Africa was founded by George Ofunja, an environmental conservation leader dedicated to transforming waste into opportunity and empowering communities across Africa through sustainable development initiatives."
         }
       },
       {
@@ -335,7 +335,7 @@ export const JsonLd = () => {
         "name": "What is Taka Kazi Africa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taka Kazi Africa is an environmental conservation organization founded by George Otieno Ogola. Taka Kazi Africa focuses on transforming waste into opportunity while empowering communities across Africa to create a cleaner, greener, and more sustainable future. Taka Kazi Africa has planted over 50,000 trees and recycled more than 500 tons of waste."
+          "text": "Taka Kazi Africa is an environmental conservation organization founded by George Ofunja. Taka Kazi Africa focuses on transforming waste into opportunity while empowering communities across Africa to create a cleaner, greener, and more sustainable future. Taka Kazi Africa has planted over 50,000 trees and recycled more than 500 tons of waste."
         }
       },
       {
@@ -343,7 +343,7 @@ export const JsonLd = () => {
         "name": "How can I get involved with Taka Kazi Africa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can get involved by volunteering for our programs, participating in tree planting activities, supporting our waste management initiatives, or making a donation to support our environmental conservation efforts led by founder George Otieno Ogola."
+          "text": "You can get involved by volunteering for our programs, participating in tree planting activities, supporting our waste management initiatives, or making a donation to support our environmental conservation efforts led by founder George Ofunja."
         }
       },
       {
@@ -351,7 +351,7 @@ export const JsonLd = () => {
         "name": "What is the impact of Taka Kazi Africa's work?",
         "acceptedAnswer": {
           "@type": "Answer", 
-          "text": "Under the leadership of founder George Otieno Ogola, we have planted over 50,000 trees, recycled more than 500 tons of waste, and empowered thousands of young people across Africa through our environmental conservation and youth empowerment programs."
+          "text": "Under the leadership of founder George Ofunja, we have planted over 50,000 trees, recycled more than 500 tons of waste, and empowered thousands of young people across Africa through our environmental conservation and youth empowerment programs."
         }
       },
       {
@@ -359,7 +359,7 @@ export const JsonLd = () => {
         "name": "Where is Taka Kazi Africa based?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Taka Kazi Africa, founded by George Otieno Ogola, is based in Kenya but operates across Africa, focusing on environmental conservation, youth empowerment, and sustainable development initiatives throughout the continent."
+          "text": "Taka Kazi Africa, founded by George Ofunja, is based in Kenya but operates across Africa, focusing on environmental conservation, youth empowerment, and sustainable development initiatives throughout the continent."
         }
       }
     ]

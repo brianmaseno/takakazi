@@ -9,8 +9,8 @@ import SEOOptimizer from '@/components/SEOOptimizer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://takakaziafrica.org'),
-  title: "Taka Kazi Africa | Environmental Conservation NGO Kenya | George Otieno Ogola Founder",
-  description: "Taka Kazi Africa is Kenya's leading environmental conservation NGO founded by George Otieno Ogola. We transform waste into opportunity across Africa with 50,000+ trees planted, 500+ tons recycled. Join our climate action movement for sustainable development in Kenya and Africa.",
+  title: "Taka Kazi Africa | Environmental Conservation NGO Kenya | George Ofunja Founder",
+  description: "Taka Kazi Africa is Kenya's leading environmental conservation NGO founded by George Ofunja. We transform waste into opportunity across Africa with 50,000+ trees planted, 500+ tons recycled. Join our climate action movement for sustainable development in Kenya and Africa.",
   keywords: [
     "Taka Kazi Africa",
     "takakazi africa",
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     "TAKA KAZI AFRICA",
     "TakaKazi Africa",
     "environmental NGO Kenya",
-    "George Otieno Ogola",
-    "George Otieno Ogola founder",
+    "George Ofunja",
+    "George Ofunja founder",
     "environmental conservation Kenya",
     "sustainability Kenya Africa",
     "climate action Kenya",
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Taka Kazi Africa - Founded by George Otieno Ogola | Environmental Conservation Africa",
-    description: "Founded by environmental leader George Otieno Ogola, Taka Kazi Africa leads climate action across Africa. 50,000+ trees planted, 500+ tons recycled. Join our environmental movement in Kenya and beyond.",
+    title: "Taka Kazi Africa | George Ofunja Environmental Conservation Kenya | Tree Planting Waste Management",
+    description: "Founded by environmental leader George Ofunja, Taka Kazi Africa leads climate action across Africa. 50,000+ trees planted, 500+ tons recycled. Join our environmental movement in Kenya and beyond.",
     siteName: "Taka Kazi Africa",
     url: "https://takakaziafrica.org",
     images: [
@@ -82,8 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taka Kazi Africa - Founded by George Otieno Ogola | Environmental Leader Africa",
-    description: "Founded by George Otieno Ogola, transforming waste into opportunity across Africa. 50,000+ trees planted. Join our climate action movement!",
+    title: "Taka Kazi Africa - Founded by George Ofunja | Environmental Leader Africa",
+    description: "Founded by George Ofunja, transforming waste into opportunity across Africa. 50,000+ trees planted. Join our climate action movement!",
     creator: "@TakaKaziAfrica",
     images: ["/logo.png"],
   },
