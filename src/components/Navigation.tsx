@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
@@ -11,34 +11,21 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isDonateModalOpen, setIsDonateModalOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const [scrolled, setScrolled] = useState(false)
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
+    return () => {
+      if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
+    }
   }, [])
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
-      
-      // Always show navigation at the top of the page
-      if (currentScrollY < 100) {
-        setIsVisible(true)
-      } else {
-        // Show when scrolling up, hide when scrolling down
-        if (currentScrollY < lastScrollY) {
-          setIsVisible(true)
-        } else {
-          setIsVisible(false)
-          // Close mobile menu when hiding navigation
-          setIsOpen(false)
-        }
-      }
-      
-      setLastScrollY(currentScrollY)
+      setScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -46,7 +33,7 @@ const Navigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [lastScrollY])
+  }, [])
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -66,22 +53,40 @@ const Navigation = () => {
     { name: 'Contact', href: '/contact' },
   ]
 
+  const handleDropdownEnter = useCallback(() => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current)
+      dropdownTimeoutRef.current = null
+    }
+    setAboutDropdownOpen(true)
+  }, [])
+
+  const handleDropdownLeave = useCallback(() => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setAboutDropdownOpen(false)
+    }, 200)
+  }, [])
+
   if (!mounted) return null
 
   return (
-    <header className={`fixed w-full z-50 transition-transform duration-300 ease-in-out ${
-      isVisible ? 'translate-y-0' : '-translate-y-full'
+    <header className={`fixed w-full z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' 
+        : 'bg-transparent'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className={`flex justify-between items-center transition-all duration-300 ${
+          scrolled ? 'py-2' : 'py-4'
+        }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <Image 
               src="/logo.png" 
               alt="Taka Kazi Africa Logo" 
-              width={150} 
-              height={150}
-              className="rounded-full"
+              width={scrolled ? 110 : 150} 
+              height={scrolled ? 110 : 150}
+              className="rounded-full transition-all duration-300"
             />
             {/* <span className="text-sm font-bold text-green-600 dark:text-green-600">
               Taka Kazi Africa
@@ -95,15 +100,19 @@ const Navigation = () => {
                 {item.dropdown ? (
                   <div 
                     className="relative"
-                    onMouseEnter={() => setAboutDropdownOpen(true)}
-                    onMouseLeave={() => setAboutDropdownOpen(false)}
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
                   >
-                    <button className="flex items-center space-x-1 text-white hover:text-green-400 transition-colors duration-200 font-medium drop-shadow-lg">
+                    <button className={`flex items-center space-x-1 transition-colors duration-200 font-medium ${
+                      scrolled 
+                        ? 'text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400' 
+                        : 'text-white hover:text-green-400 drop-shadow-lg'
+                    }`}>
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
                     {aboutDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-50">
+                      <div className="absolute top-full left-0 mt-0 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-50">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
@@ -119,7 +128,11 @@ const Navigation = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-white hover:text-green-400 transition-colors duration-200 font-medium drop-shadow-lg"
+                    className={`transition-colors duration-200 font-medium ${
+                      scrolled 
+                        ? 'text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400' 
+                        : 'text-white hover:text-green-400 drop-shadow-lg'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -138,14 +151,18 @@ const Navigation = () => {
             
             {/* Theme Toggle */}
             <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors duration-200"
+              onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+              className={`p-2 rounded-full transition-colors duration-200 ${
+                scrolled 
+                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
+                  : 'bg-white/20 backdrop-blur-sm hover:bg-white/30'
+              }`}
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
+              {resolvedTheme === 'dark' ? (
                 <Sun className="w-5 h-5 text-yellow-400" />
               ) : (
-                <Moon className="w-5 h-5 text-white" />
+                <Moon className={`w-5 h-5 ${scrolled ? 'text-gray-700 dark:text-white' : 'text-white'}`} />
               )}
             </button>
           </div>
@@ -153,19 +170,27 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors duration-200"
+              onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+              className={`p-2 rounded-full transition-colors duration-200 ${
+                scrolled 
+                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
+                  : 'bg-white/20 backdrop-blur-sm hover:bg-white/30'
+              }`}
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
+              {resolvedTheme === 'dark' ? (
                 <Sun className="w-5 h-5 text-yellow-400" />
               ) : (
-                <Moon className="w-5 h-5 text-white" />
+                <Moon className={`w-5 h-5 ${scrolled ? 'text-gray-700 dark:text-white' : 'text-white'}`} />
               )}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-white hover:text-green-400"
+              className={`p-2 rounded-md transition-colors duration-200 ${
+                scrolled 
+                  ? 'text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400' 
+                  : 'text-white hover:text-green-400'
+              }`}
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

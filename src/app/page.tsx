@@ -4,7 +4,6 @@ import { useState } from 'react'
 import HeroSection from '@/components/HeroSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import StatsSection from '@/components/StatsSection'
-import InteractiveFeatures from '@/components/InteractiveFeatures'
 import SDGSection from '@/components/SDGSection'
 import Gallery from '@/components/Gallery'
 import ProjectShowcase from '@/components/ProjectShowcase'
@@ -21,10 +20,9 @@ export default function Home() {
   return (
     <>
       <HeroSection onOpenDonateModal={() => setIsDonateModalOpen(true)} />
-      <InteractiveFeatures />
       <FeaturesSection />
       <ProjectShowcase />
-      <Gallery />
+      <Gallery preview />
       <SDGSection />
       <StrategicFocusSection />
       <StatsSection />

@@ -100,7 +100,7 @@ export default function FounderPage() {
                   src="/founder.jpg"
                   alt="George Ofunja - Founder of Taka Kazi Africa"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
