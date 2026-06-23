@@ -61,21 +61,21 @@ export default function FounderPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                Meet{' '}
-                <span className="text-green-600 dark:text-green-400">
-                  George Ofunja
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                Founder & Environmental Conservation Leader
-              </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                George Ofunja is a visionary environmental leader who founded Taka Kazi Africa 
-                with a mission to transform waste into opportunity while empowering communities across 
-                Africa. His passion for environmental conservation and youth development has led to 
-                remarkable achievements in sustainable development and community empowerment.
-              </p>
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              Meet{' '}
+              <span className="text-green-600 dark:text-green-400">
+                George Ofunja
+              </span>
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+              Founder & Director, Taka Kazi Africa
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+              George Ofunja is the Founder and Director of Taka Kazi Africa. Inspired by the need to tackle environmental degradation, youth unemployment, and climate change, he established Taka Kazi Africa to empower communities through circular economy solutions and environmental action.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+              His vision is to build a generation of green leaders and create sustainable solutions that benefit people and the planet.
+            </p>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-4 py-2 rounded-full text-sm font-medium">
                   Environmental Leader

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Leaf, Users, Heart, Globe, Target, Eye } from 'lucide-react'
+import { Leaf, Users, Heart, Target, Eye, Shield, Handshake, Lightbulb, Award, Sparkles } from 'lucide-react'
 import Image from 'next/image'
 import ScrollArrows from '@/components/ScrollArrows'
 
@@ -14,40 +14,52 @@ const AboutContent = () => {
       color: 'text-green-500'
     },
     {
-      icon: Users,
-      title: 'Empowerment',
-      description: 'Building skills, capacity, and opportunity for youth and communities across Africa.',
+      icon: Shield,
+      title: 'Integrity',
+      description: 'Acting with transparency, ethics, and accountability in all our endeavors.',
       color: 'text-blue-500'
     },
     {
-      icon: Eye,
+      icon: Lightbulb,
       title: 'Innovation',
-      description: 'Developing creative, sustainable solutions to environmental challenges.',
-      color: 'text-indigo-500'
+      description: 'Developing creative, sustainable solutions to environmental and social challenges.',
+      color: 'text-yellow-500'
     },
     {
-      icon: Heart,
-      title: 'Integrity',
-      description: 'Acting with transparency, ethics, and accountability in all our endeavors.',
-      color: 'text-red-500'
-    },
-    {
-      icon: Globe,
-      title: 'Inclusion',
+      icon: Users,
+      title: 'Inclusion and Diversity',
       description: 'Engaging diverse voices and ensuring no one is left behind in our mission.',
       color: 'text-purple-500'
     },
     {
+      icon: Handshake,
+      title: 'Collaboration',
+      description: 'Building partnerships and working together to amplify our collective impact.',
+      color: 'text-indigo-500'
+    },
+    {
       icon: Target,
-      title: 'Peace with Nature',
-      description: 'Recognizing environmental harmony as essential to human well-being.',
+      title: 'Sustainability',
+      description: 'Promoting practices that balance people, profit, and the planet for long-term impact.',
+      color: 'text-emerald-500'
+    },
+    {
+      icon: Heart,
+      title: 'Accountability',
+      description: 'Taking responsibility for our actions and measuring our impact with transparency.',
+      color: 'text-red-500'
+    },
+    {
+      icon: Award,
+      title: 'Service',
+      description: 'Putting communities first and serving with dedication and compassion.',
       color: 'text-teal-500'
     },
     {
-      icon: Leaf,
-      title: 'Sustainability',
-      description: 'Promoting practices that balance people, profit, and the planet.',
-      color: 'text-emerald-500'
+      icon: Sparkles,
+      title: 'Youth Leadership',
+      description: 'Empowering young people as drivers of change and solution providers.',
+      color: 'text-orange-500'
     }
   ]
 
@@ -63,7 +75,7 @@ const AboutContent = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            About Taka Kazi Africa
+            Who We Are
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl max-w-3xl mx-auto"
@@ -71,8 +83,7 @@ const AboutContent = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            A transformative social enterprise and environmental movement dedicated to 
-            cleaning, conserving, and restoring our planet.
+            Taka Kazi Africa is a Kenyan youth-led social enterprise dedicated to safeguarding humanity, biodiversity, and ecosystems through innovative waste management, environmental education, climate action, sustainable enterprise development, and active community engagement.
           </motion.p>
         </div>
       </section>
@@ -92,8 +103,7 @@ const AboutContent = () => {
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Our Vision</h2>
               </div>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                A cleaner, greener, healthier, and more sustainable Africa—free from pollution 
-                and waste—where people and planet thrive together.
+                A clean, green, prosperous, and sustainable Africa where people and nature thrive together.
               </p>
               
               {/* Vision Image */}
@@ -119,9 +129,7 @@ const AboutContent = () => {
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Our Mission</h2>
               </div>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                To catalyze environmental stewardship, climate resilience, and sustainable 
-                economic opportunities through education, innovation, and action—transforming 
-                waste into resources, challenges into solutions, and individuals into empowered changemakers.
+                To transform waste into wealth through environmental stewardship, innovation, green entrepreneurship, climate action, and sustainable community development.
               </p>
             </motion.div>
 
@@ -229,8 +237,7 @@ const AboutContent = () => {
               Our Story
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              From vision to action: how Taka Kazi Africa became a force for environmental 
-              and social transformation.
+              Founded by George Ofunja, Taka Kazi Africa believes that waste is not merely a problem—it is an opportunity to create jobs, restore the environment, and improve lives.
             </p>
           </motion.div>
 

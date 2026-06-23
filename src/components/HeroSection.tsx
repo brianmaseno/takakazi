@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown, Play, Sparkles, ArrowRight } from 'lucide-react'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import Link from 'next/link'
 
 interface HeroSectionProps {
@@ -10,7 +10,6 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -90,52 +89,74 @@ const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-[1.2] tracking-tight"
         >
-          <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent block">
-            Taka Kazi
+          <span className="text-white block">
+            Transforming Waste into Wealth
           </span>
-          <span className="text-white block mt-2">Africa</span>
+          <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent block mt-2">
+            for People and Planet
+          </span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg sm:text-xl md:text-2xl mb-10 text-gray-200 font-light max-w-4xl mx-auto leading-relaxed"
+          className="text-base sm:text-lg md:text-xl mb-10 text-gray-200 font-light max-w-4xl mx-auto leading-relaxed"
         >
-          <span className="font-semibold text-green-400 block mb-2">Clean. Conserve. Recycle. Empower.</span>
-          <span className="block">Transforming waste into opportunity across Africa through environmental stewardship and youth empowerment.</span>
+          <span className="block">
+            Taka Kazi Africa is a youth-led social enterprise and environmental movement committed to building cleaner, greener, and more resilient communities through circular economy solutions, climate action, green jobs, environmental education, and sustainable livelihoods.
+          </span>
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16"
+          className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-16"
         >
-          <Link href="/get-involved">
+          {onOpenDonateModal && (
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(234, 88, 12, 0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onOpenDonateModal}
+              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Donate</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          )}
+          <Link href="/shop">
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 148, 58, 0.3)" }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-2xl hover:shadow-green-500/25 transition-all duration-300 flex items-center space-x-2"
+              className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow-2xl hover:shadow-green-500/25 transition-all duration-300 flex items-center space-x-2"
             >
-              <span>Join Our Movement</span>
+              <span>Shop</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </Link>
-          
-          {onOpenDonateModal && (
+          <Link href="/get-involved">
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)" }}
               whileTap={{ scale: 0.95 }}
-              onClick={onOpenDonateModal}
-              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center space-x-2"
+              className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Join the Movement</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          </Link>
+          <Link href="/partner">
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(147, 51, 234, 0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center space-x-2"
             >
               <span>Partner With Us</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
-          )}
+          </Link>
         </motion.div>
 
         {/* Statistics */}
@@ -143,12 +164,13 @@ const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto"
         >
           {[
-            { number: "50K+", label: "Trees Planted" },
-            { number: "100+", label: "Communities" },
-            { number: "500T", label: "Waste Recycled" }
+            { number: "50,000+", label: "Trees Planted" },
+            { number: "42+", label: "Tons Waste Recovered" },
+            { number: "1,000+", label: "Youth Empowered" },
+            { number: "100+", label: "Communities Reached" }
           ].map((stat, index) => (
             <motion.div
               key={index}
@@ -158,10 +180,10 @@ const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
               whileHover={{ scale: 1.1, y: -5 }}
               className="text-center"
             >
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 mb-2">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-400 mb-2">
                 {stat.number}
               </div>
-              <div className="text-sm sm:text-base text-gray-300">{stat.label}</div>
+              <div className="text-xs sm:text-sm text-gray-300">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

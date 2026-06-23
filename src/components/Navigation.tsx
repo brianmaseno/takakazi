@@ -14,7 +14,7 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false)
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false)
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const { theme, setTheme, resolvedTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -45,11 +45,14 @@ const Navigation = () => {
         { name: 'Meet Our Founder', href: '/about/founder' }
       ]
     },
-    { name: 'Team', href: '/team' },
+    { name: 'What We Do', href: '/what-we-do' },
     { name: 'Initiatives', href: '/initiatives' },
-    { name: 'Gallery', href: '/gallery' },
     { name: 'Impact', href: '/impact' },
-    { name: 'Get Involved', href: '/get-involved' },
+    { name: 'Team', href: '/team' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Shop', href: '/shop' },
+    { name: 'News', href: '/news' },
+    { name: 'Podcast', href: '/podcast' },
     { name: 'Contact', href: '/contact' },
   ]
 

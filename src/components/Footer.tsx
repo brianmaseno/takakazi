@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -20,8 +20,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-green-400">Taka Kazi Africa</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Transforming waste into opportunity through environmental stewardship, 
-              youth empowerment, and sustainable community development across Africa.
+              Transforming Waste into Wealth for People and Planet. Creating Green Jobs. Restoring Ecosystems. Empowering Communities.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/takakaziafrica/" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -44,9 +43,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-green-400">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/what-we-do" className="text-gray-300 hover:text-white transition-colors">What We Do</Link></li>
               <li><Link href="/initiatives" className="text-gray-300 hover:text-white transition-colors">Our Initiatives</Link></li>
-              <li><Link href="/impact" className="text-gray-300 hover:text-white transition-colors">Impact Stories</Link></li>
-              <li><Link href="/get-involved" className="text-gray-300 hover:text-white transition-colors">Get Involved</Link></li>
+              <li><Link href="/impact" className="text-gray-300 hover:text-white transition-colors">Our Impact</Link></li>
+              <li><Link href="/shop" className="text-gray-300 hover:text-white transition-colors">Shop</Link></li>
+              <li><Link href="/news" className="text-gray-300 hover:text-white transition-colors">News & Stories</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -60,8 +61,8 @@ const Footer = () => {
                 <span className="text-gray-300">info@takakaziafrica.org</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-green-400" />
-                <span className="text-gray-300">+254  746 626 474</span>
+                <Mail className="w-4 h-4 text-green-400" />
+                <span className="text-gray-300">takakaziafrica@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-green-400" />
@@ -74,8 +75,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 Taka Kazi Africa. All rights reserved.
+            <p className="text-gray-400 text-sm text-center">
+              Together for a Cleaner, Greener, and Sustainable Future.<br/>
+              © {new Date().getFullYear()} Taka Kazi Africa. All Rights Reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
