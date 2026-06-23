@@ -20,7 +20,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-green-400">Taka Kazi Africa</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Transforming Waste into Wealth for People and Planet. Creating Green Jobs. Restoring Ecosystems. Empowering Communities.
+              Transforming Waste into Wealth for People and Planet. Creating Green Jobs. Restoring Ecosystems. Empowering Communities .
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/takakaziafrica/" className="text-gray-400 hover:text-green-400 transition-colors">
