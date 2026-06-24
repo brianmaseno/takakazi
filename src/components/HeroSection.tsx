@@ -30,7 +30,7 @@ const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
   return (
     <section
       ref={heroRef}
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center"
     >
       {/* Background Image with Parallax */}
       <motion.div
@@ -164,7 +164,7 @@ const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto"
         >
           {[
             { number: "50,000+", label: "Trees Planted" },
@@ -177,13 +177,13 @@ const HeroSection = ({ onOpenDonateModal }: HeroSectionProps) => {
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-              whileHover={{ scale: 1.1, y: -5 }}
-              className="text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="text-center p-3 sm:p-4 rounded-xl bg-white/10 backdrop-blur-sm"
             >
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-400 mb-2">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 mb-2">
                 {stat.number}
               </div>
-              <div className="text-xs sm:text-sm text-gray-300">{stat.label}</div>
+              <div className="text-sm sm:text-base text-white font-semibold">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

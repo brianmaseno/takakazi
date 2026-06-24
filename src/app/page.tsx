@@ -71,7 +71,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <div className="-mt-16">
       <HeroSection onOpenDonateModal={() => setIsDonateModalOpen(true)} />
       <FeaturesSection />
       <ProjectShowcase />
@@ -149,6 +149,6 @@ export default function Home() {
         isOpen={isDonateModalOpen} 
         onClose={() => setIsDonateModalOpen(false)} 
       />
-    </>
+    </div>
   );
 }

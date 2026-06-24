@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, Clock, Users, Heart } from 'lucide-react'
+import { Mail, MapPin, Send, Clock, Users, Heart } from 'lucide-react'
 import ScrollArrows from '@/components/ScrollArrows'
 
 const ContactPage = () => {
@@ -32,25 +32,19 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@takakaziafrica.org', 'partnerships@takakaziafrica.org'],
+      details: ['takakaziafrica@gmail.com'],
       color: 'text-blue-500'
-    },
-    {
-      icon: Phone,
-      title: 'Call Us',
-      details: ['+254 700 000 000', '+254 711 111 111'],
-      color: 'text-green-500'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['Nairobi, Kenya', 'East Africa Region'],
+      details: ['Nairobi, Kenya'],
       color: 'text-purple-500'
     },
     {
       icon: Clock,
       title: 'Office Hours',
-      details: ['Mon - Fri: 8:00 AM - 6:00 PM', 'Sat: 9:00 AM - 2:00 PM'],
+      details: ['Mon - Fri: 8:00 AM - 5:00 PM', 'Sat: 9:00 AM - 2:00 PM'],
       color: 'text-orange-500'
     }
   ]
@@ -71,7 +65,7 @@ const ContactPage = () => {
   ]
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center bg-conservation">
         <div className="absolute inset-0 bg-black/60"></div>

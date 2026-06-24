@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Award, TreePine, Users, Globe, Heart, Target } from 'lucide-react'
+import { TreePine, Users, Globe, Heart, Target } from 'lucide-react'
 
 export default function FounderPage() {
   const achievements = [
@@ -20,15 +20,9 @@ export default function FounderPage() {
     },
     {
       icon: Globe,
-      number: "500+",
+      number: "2+",
       label: "Tons Recycled",
-      description: "Innovative waste management programs recycled 500+ tons of waste"
-    },
-    {
-      icon: Award,
-      number: "Multiple",
-      label: "Awards Received",
-      description: "Recognition for environmental leadership and sustainable development"
+      description: "Innovative waste management programs recycled 2+ tons of waste"
     }
   ]
 
@@ -61,19 +55,19 @@ export default function FounderPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Meet{' '}
               <span className="text-green-600 dark:text-green-400">
                 George Ofunja
               </span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-base text-gray-600 dark:text-gray-300 mb-6">
               Founder & Director, Taka Kazi Africa
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+            <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               George Ofunja is the Founder and Director of Taka Kazi Africa. Inspired by the need to tackle environmental degradation, youth unemployment, and climate change, he established Taka Kazi Africa to empower communities through circular economy solutions and environmental action.
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+            <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               His vision is to build a generation of green leaders and create sustainable solutions that benefit people and the planet.
             </p>
               <div className="flex flex-wrap gap-4">
@@ -95,12 +89,12 @@ export default function FounderPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-full max-w-xs mx-auto lg:max-w-sm h-72 lg:h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/founder.jpg"
                   alt="George Ofunja - Founder of Taka Kazi Africa"
                   fill
-                  className="object-cover object-top"
+                  className="object-contain"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -133,7 +127,7 @@ export default function FounderPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
@@ -237,10 +231,10 @@ export default function FounderPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Join George&apos;s Mission
+              Join Takakazi&apos;s Mission
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Be part of the movement that George Ofunja started. Together, we can continue 
+              Be part of the movement that Takakazi started. Together, we can continue 
               transforming waste into opportunity and building a sustainable future for Africa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -76,20 +76,18 @@ const Navigation = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
+        : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex justify-between items-center transition-all duration-300 ${
-          scrolled ? 'py-2' : 'py-4'
-        }`}>
+        <div className="flex justify-between items-center py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <Image 
               src="/logo.png" 
               alt="Taka Kazi Africa Logo" 
-              width={scrolled ? 110 : 150} 
-              height={scrolled ? 110 : 150}
-              className="rounded-full transition-all duration-300"
+              width={100} 
+              height={100}
+              className="rounded-full"
             />
             {/* <span className="text-sm font-bold text-green-600 dark:text-green-600">
               Taka Kazi Africa
@@ -106,11 +104,7 @@ const Navigation = () => {
                     onMouseEnter={handleDropdownEnter}
                     onMouseLeave={handleDropdownLeave}
                   >
-                    <button className={`flex items-center space-x-1 transition-colors duration-200 font-medium ${
-                      scrolled 
-                        ? 'text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400' 
-                        : 'text-white hover:text-green-400 drop-shadow-lg'
-                    }`}>
+                    <button className="flex items-center space-x-1 transition-colors duration-200 font-medium text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400">
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
@@ -131,11 +125,7 @@ const Navigation = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`transition-colors duration-200 font-medium ${
-                      scrolled 
-                        ? 'text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400' 
-                        : 'text-white hover:text-green-400 drop-shadow-lg'
-                    }`}
+                    className="transition-colors duration-200 font-medium text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400"
                   >
                     {item.name}
                   </Link>
@@ -155,17 +145,13 @@ const Navigation = () => {
             {/* Theme Toggle */}
             <button
               onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-              className={`p-2 rounded-full transition-colors duration-200 ${
-                scrolled 
-                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
-                  : 'bg-white/20 backdrop-blur-sm hover:bg-white/30'
-              }`}
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {resolvedTheme === 'dark' ? (
                 <Sun className="w-5 h-5 text-yellow-400" />
               ) : (
-                <Moon className={`w-5 h-5 ${scrolled ? 'text-gray-700 dark:text-white' : 'text-white'}`} />
+                <Moon className="w-5 h-5 text-gray-700 dark:text-white" />
               )}
             </button>
           </div>
@@ -174,26 +160,18 @@ const Navigation = () => {
           <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-              className={`p-2 rounded-full transition-colors duration-200 ${
-                scrolled 
-                  ? 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700' 
-                  : 'bg-white/20 backdrop-blur-sm hover:bg-white/30'
-              }`}
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {resolvedTheme === 'dark' ? (
                 <Sun className="w-5 h-5 text-yellow-400" />
               ) : (
-                <Moon className={`w-5 h-5 ${scrolled ? 'text-gray-700 dark:text-white' : 'text-white'}`} />
+                <Moon className="w-5 h-5 text-gray-700 dark:text-white" />
               )}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md transition-colors duration-200 ${
-                scrolled 
-                  ? 'text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400' 
-                  : 'text-white hover:text-green-400'
-              }`}
+              className="p-2 rounded-md text-gray-800 dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

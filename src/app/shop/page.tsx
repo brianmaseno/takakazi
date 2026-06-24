@@ -23,7 +23,7 @@ const ShopPage = () => {
   ]
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center bg-african-savanna">
         <div className="absolute inset-0 bg-black/60"></div>

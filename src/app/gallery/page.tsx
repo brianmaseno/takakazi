@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="pt-20">
+    <main>
       <Gallery />
       <ScrollArrows />
     </main>
